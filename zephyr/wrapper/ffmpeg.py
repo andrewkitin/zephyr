@@ -5,6 +5,10 @@ class FFMPEG:
     def nobuffer(self):
         self.command_args.extend(["-fflags", "nobuffer"])
         return self
+    
+    def latency(self):
+        self.command_args.extend(["-tune", "zerolatency"])
+        return self
 
     def read(self):
         self.command_args.append("-re")

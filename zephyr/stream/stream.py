@@ -100,6 +100,7 @@ class Stream:
             .input("-")
             .codec(codec.LIBX264)
             .preset(preset.ULTRAFAST)
+            .latency()
             .video_format(video_format.RTSP)
             .rtsp_transport(transport.TCP)
             .muxdelay(self.mux_delay)
